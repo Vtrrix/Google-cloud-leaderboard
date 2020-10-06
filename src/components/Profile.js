@@ -1,11 +1,15 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardHeader from "@material-ui/core/CardHeader";
-import CardContent from "@material-ui/core/CardContent";
-import Avatar from "@material-ui/core/Avatar";
-import Typography from "@material-ui/core/Typography";
 import { blue } from "@material-ui/core/colors";
+import {
+  List,
+  ListItem,
+  Avatar,
+  CardContent,
+  Typography,
+  CardHeader,
+  Card,
+  makeStyles,
+} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Profile({student}) {
+export default function Profile({ student }) {
   const classes = useStyles();
 
   return (
@@ -25,19 +29,22 @@ export default function Profile({student}) {
       <CardHeader
         avatar={
           <Avatar aria-label="recipe" className={classes.avatar}>
-            R
+            <img src={student.dp} alt="G" />
           </Avatar>
         }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
+        title={student.name}
+        subheader={student.quests_status}
       />
-
+      <hr style={{ width: "85%", opacity: "0.2" }}></hr>
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the
-          mussels, if you like.
+          {student.qwiklabs_id}
         </Typography>
+        <List style={{ height: "200px", overflowY: "auto" }}>
+          {student.quests.map((ele) => {
+            return <ListItem>{ele}</ListItem>;
+          })}
+        </List>
       </CardContent>
     </Card>
   );
