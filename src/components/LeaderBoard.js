@@ -6,7 +6,7 @@ class LeaderBoard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      values: {},
+      values: [],
     };
   }
   componentDidMount() {
@@ -23,6 +23,7 @@ class LeaderBoard extends Component {
           this.setState({
             values: Array.from(data),
           });
+          // console.log(this.state.values)
         });
       })
       .catch((err) => {
@@ -34,8 +35,8 @@ class LeaderBoard extends Component {
     return (
       <Container>
         <Box my={2}>
-          {this.state.values.map((ele) => {
-            return <Profile />;
+          {this.state.values.map((student) => {
+            return <Profile student={student} key={student.id}/>;
           })}
         </Box>
       </Container>
