@@ -17,11 +17,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Profile(props) {
+export default function Profile({student}) {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} key={student.id}>
       <CardHeader
         avatar={
           <Avatar aria-label="recipe" className={classes.avatar}>
