@@ -38,7 +38,7 @@ class LeaderBoard extends Component {
           <Grid container justify="center" spacing={4}>
             {this.state.values.map((student) => {
               return (
-                <Grid item xs={4}>
+                <Grid item>
                   <Profile student={student} key={student.id} />
                 </Grid>
               );
