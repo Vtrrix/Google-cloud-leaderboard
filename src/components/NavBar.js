@@ -6,8 +6,11 @@ import {
   Typography,
   CssBaseline,
   useScrollTrigger,
+  IconButton
 } from "@material-ui/core";
+import Brightness4RoundedIcon from '@material-ui/icons/Brightness4Rounded';
 import Logo from "../assets/logo.png";
+import { grey } from '@material-ui/core/colors';
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -39,6 +42,9 @@ export default function NavBar(props) {
             <Typography variant="h6">
               <img src={Logo} className="logo" alt="Google"></img>
             </Typography>
+            <IconButton style={{marginLeft: "auto"}} onClick={props.changeTheme}>
+              <Brightness4RoundedIcon style={{color: grey[900]}} />
+            </IconButton>
           </Toolbar>
         </AppBar>
       </ElevationScroll>
