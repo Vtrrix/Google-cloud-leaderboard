@@ -16,7 +16,7 @@ import {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: "85vw",
+    marginBottom: "25px",
   },
   expand: {
     transform: "rotate(0deg)",
@@ -31,9 +31,19 @@ const useStyles = makeStyles((theme) => ({
   avatar: {
     backgroundColor: blue[500],
   },
+  golden: {
+    border: "2px solid #f7cc35",
+    marginTop: "25px"
+  },
+  silver: {
+    border: "2px solid #a8a9ad"
+  },
+  bronze: {
+    border: "2px solid #b08d57"
+  },
 }));
 
-export default function Profile({ student }) {
+export default function Profile({ student, index }) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
   const handleExpandClick = () => {
@@ -41,45 +51,51 @@ export default function Profile({ student }) {
   };
   return (
     <Card
-      className={classes.root}
       key={student.id}
-      style={{ minWidth: "280px", margin: "25px" }}
+      className={`${classes.root} ${index === 0? classes.golden: null} ${index === 1? classes.silver: null} ${index === 2? classes.bronze: null}`}
     >
       <CardContent>
         <Box
           display="flex"
           flexDirection="row"
           alignItems="center"
-          justifyContent="space-between"
+          // justifyContent="space-between"
         >
-          <a
-            href={student.qwiklabs_id}
-            target="_blank"
-            style={{ textDecoration: "none", color: "#212121" }}
-          >
-            <Box display="flex">
-              <Avatar aria-label={student.name} className={classes.avatar}>
-                <img src={student.dp} alt="G" />
-              </Avatar>
-              <Box display="flex" display="flex" alignItems="center" mx={3}>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  {student.name}
-                </Typography>
+          <div style={{flex: "1", display: "flex", alignItems: "center"}} >
+            <Typography variant="body2" color="textSecondary" component="p" style={{marginRight: "20px"}} >
+              {`${index + 1}.`}
+            </Typography>
+            <a
+              href={student.qwiklabs_id}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none", color: "#212121" }}
+            >
+              <Box display="flex">
+                <Avatar aria-label={student.name} className={classes.avatar} src={student.dp}/>
+                <Box display="flex" alignItems="center" mx={3}>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                    {student.name}
+                  </Typography>
+                </Box>
               </Box>
-            </Box>
-          </a>
+            </a>
+          </div>
 
           <Box display="flex">
             <Avatar
               aria-label={student.name}
               style={{
                 color: "#fafafa",
-                background: "#bdbdbd",
+                background: "#efefef",
                 marginRight: "10px",
+                border: "1px solid #cdcdcd"
               }}
               className={classes.avatar}
             >
-              {student.quests_status}
+              <Typography style={{color: "black"}}>
+                {student.quests_status}
+              </Typography>
             </Avatar>
             <IconButton
               className={clsx(classes.expand, {
@@ -96,14 +112,10 @@ export default function Profile({ student }) {
       </CardContent>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Grid container className={classes.root} spacing={4}>
-            {student.quests.map((ele) => {
-              return (
-                <Grid item xs={3}>
-                  <img src={ele.img} style={{ width: "80%" }}></img>
-                </Grid>
-              );
-            })}
+          <Grid style={{display: "flex", flexWrap: "wrap" }}>
+            {student.quests.map((tile) => (
+              <img src={tile.img} alt={tile.name} style={{width:"300px", height: "100%" , margin:"auto"}} key={tile.name}></img>
+            ))}
           </Grid>
         </CardContent>
       </Collapse>
