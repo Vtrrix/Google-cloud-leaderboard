@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Box, Container } from "@material-ui/core";
 import Profile from "./Profile";
-
+import Grid from "@material-ui/core/Grid";
 class LeaderBoard extends Component {
   constructor(props) {
     super(props);
@@ -36,7 +36,7 @@ class LeaderBoard extends Component {
       <Container>
         <Box my={2}>
           {this.state.values.map((student) => {
-            return <Profile student={student} key={student.id}/>;
+            return <Profile student={student} key={student.id} />;
           })}
         </Box>
       </Container>
