@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/temporary/static/css/main.436a93f5.chunk.css",
-    "main.js": "/temporary/static/js/main.c6b5af6f.chunk.js",
-    "main.js.map": "/temporary/static/js/main.c6b5af6f.chunk.js.map",
-    "runtime-main.js": "/temporary/static/js/runtime-main.e9af60a0.js",
-    "runtime-main.js.map": "/temporary/static/js/runtime-main.e9af60a0.js.map",
-    "static/js/2.17e161cf.chunk.js": "/temporary/static/js/2.17e161cf.chunk.js",
-    "static/js/2.17e161cf.chunk.js.map": "/temporary/static/js/2.17e161cf.chunk.js.map",
-    "index.html": "/temporary/index.html",
-    "precache-manifest.36479a3680da9646f0616e55f3b59fab.js": "/temporary/precache-manifest.36479a3680da9646f0616e55f3b59fab.js",
-    "service-worker.js": "/temporary/service-worker.js",
-    "static/css/main.436a93f5.chunk.css.map": "/temporary/static/css/main.436a93f5.chunk.css.map",
-    "static/js/2.17e161cf.chunk.js.LICENSE.txt": "/temporary/static/js/2.17e161cf.chunk.js.LICENSE.txt",
-    "static/media/logo.png": "/temporary/static/media/logo.98aa612b.png"
+    "main.css": "/Google-cloud-leaderboard/static/css/main.436a93f5.chunk.css",
+    "main.js": "/Google-cloud-leaderboard/static/js/main.510953af.chunk.js",
+    "main.js.map": "/Google-cloud-leaderboard/static/js/main.510953af.chunk.js.map",
+    "runtime-main.js": "/Google-cloud-leaderboard/static/js/runtime-main.9a08c57b.js",
+    "runtime-main.js.map": "/Google-cloud-leaderboard/static/js/runtime-main.9a08c57b.js.map",
+    "static/js/2.3ddcd375.chunk.js": "/Google-cloud-leaderboard/static/js/2.3ddcd375.chunk.js",
+    "static/js/2.3ddcd375.chunk.js.map": "/Google-cloud-leaderboard/static/js/2.3ddcd375.chunk.js.map",
+    "index.html": "/Google-cloud-leaderboard/index.html",
+    "precache-manifest.8a2b2878c007c7f85a1286360c97fa84.js": "/Google-cloud-leaderboard/precache-manifest.8a2b2878c007c7f85a1286360c97fa84.js",
+    "service-worker.js": "/Google-cloud-leaderboard/service-worker.js",
+    "static/css/main.436a93f5.chunk.css.map": "/Google-cloud-leaderboard/static/css/main.436a93f5.chunk.css.map",
+    "static/js/2.3ddcd375.chunk.js.LICENSE.txt": "/Google-cloud-leaderboard/static/js/2.3ddcd375.chunk.js.LICENSE.txt",
+    "static/media/logo.png": "/Google-cloud-leaderboard/static/media/logo.98aa612b.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.e9af60a0.js",
-    "static/js/2.17e161cf.chunk.js",
+    "static/js/runtime-main.9a08c57b.js",
+    "static/js/2.3ddcd375.chunk.js",
     "static/css/main.436a93f5.chunk.css",
-    "static/js/main.c6b5af6f.chunk.js"
+    "static/js/main.510953af.chunk.js"
   ]
 }
