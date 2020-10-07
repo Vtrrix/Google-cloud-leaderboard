@@ -35,15 +35,9 @@ class LeaderBoard extends Component {
     return (
       <Container>
         <Box my={2}>
-          <Grid container justify="center" spacing={4}>
-            {this.state.values.map((student) => {
-              return (
-                <Grid item>
-                  <Profile student={student} key={student.id} />
-                </Grid>
-              );
-            })}
-          </Grid>
+          {this.state.values.map((student) => {
+            return <Profile student={student} key={student.id} />;
+          })}
         </Box>
       </Container>
     );
