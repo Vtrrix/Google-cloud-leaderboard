@@ -32,15 +32,44 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: blue[500],
   },
   golden: {
-    border: "2px solid #f7cc35",
-    marginTop: "25px"
+    border: "3px solid #ffd700",
+    marginTop: "40px",
+    marginBottom: "60px",
+    animation: "$glow 2s linear infinite",
+    color: "#ffd700"
   },
   silver: {
-    border: "2px solid #a8a9ad"
+    border: "3px solid #a8a9ad",
+    animation: "$glow 2s linear infinite",
+    color: "#a8a9ad",
+    marginBottom: "60px",
   },
   bronze: {
-    border: "2px solid #b08d57"
+    border: "3px solid #b08d57",
+    animation: "$glow 2s linear infinite",
+    color: "#b08d57",
+    marginBottom: "60px",
   },
+  "@keyframes glow":{
+    "0%":{
+      boxShadow: "0 0 30px"
+    },
+    "20%": {
+      boxShadow: "0 0 35px"
+    },
+    "40%":{
+      boxShadow: "0 0 37px"
+    },
+    "60%":{
+      boxShadow: "0 0 40px"
+    },
+    "80%":{
+      boxShadow: "0 0 35px"
+    },
+    "100%":{
+      boxShadow: "0 0 30px"
+    }
+  }
 }));
 
 export default function Profile({ student, index }) {
@@ -49,10 +78,12 @@ export default function Profile({ student, index }) {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
+  const colors = ["#4285F4", "#DB4437", "#F4B400", "#0F9D58"]
   return (
     <Card
       key={student.id}
       className={`${classes.root} ${index === 0? classes.golden: null} ${index === 1? classes.silver: null} ${index === 2? classes.bronze: null}`}
+      style={index>2?{border: `2px solid ${colors[index%4]}`}:{}}
     >
       <CardContent>
         <Box
@@ -114,7 +145,7 @@ export default function Profile({ student, index }) {
         <CardContent>
           <Grid style={{display: "flex", flexWrap: "wrap" }}>
             {student.quests.map((tile) => (
-              <img src={tile.img} alt={tile.name} style={{width:"300px", height: "100%" , margin:"auto"}} key={tile.name}></img>
+              <img src={tile.imageSrc} alt={tile.title} style={{width:"300px", height: "100%" , margin:"auto"}} key={tile.name}></img>
             ))}
           </Grid>
         </CardContent>

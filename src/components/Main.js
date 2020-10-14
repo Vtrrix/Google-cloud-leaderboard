@@ -8,7 +8,11 @@ function Main() {
   
   let [theme, setTheme] = useState({
     palette: {
-      type: 'light',
+      type: 'dark',
+      background:{
+        default: "#121212",
+        paper: "#232323"
+      }
     },
   })
   function changeTheme(){
@@ -23,6 +27,10 @@ function Main() {
       setTheme({
           palette: {
             type: 'dark',
+            background:{
+              default: "#121212",
+              paper: "#232323"
+            }
           },
       })
     }
