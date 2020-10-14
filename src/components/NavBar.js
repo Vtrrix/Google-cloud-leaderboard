@@ -9,7 +9,6 @@ import {
   IconButton
 } from "@material-ui/core";
 import Brightness4RoundedIcon from '@material-ui/icons/Brightness4Rounded';
-import { grey } from '@material-ui/core/colors';
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -32,11 +31,12 @@ ElevationScroll.propTypes = {
 };
 
 export default function NavBar(props) {
+
   return (
     <>
       <CssBaseline />
       <ElevationScroll {...props}>
-        <AppBar style={{ background: "#fff" }}>
+        <AppBar style={props.theme.palette.type === "dark"? { background: "#121212" }: {background: "#fff"}}>
           <Toolbar>
             <Typography variant="h6" style={{color: "#344334", fontWeight: "bold", fontSize: "30px", display: "flex"}}>
               <p style={{margin: "0px", color: "#4285F4"}}>30</p>&nbsp;
@@ -45,7 +45,7 @@ export default function NavBar(props) {
               <p style={{margin: "0px", color: "#0F9D58"}}>Google Cloud</p>
             </Typography>
             <IconButton style={{marginLeft: "auto"}} onClick={props.changeTheme}>
-              <Brightness4RoundedIcon style={{color: grey[900]}} />
+              <Brightness4RoundedIcon/>
             </IconButton>
           </Toolbar>
         </AppBar>
