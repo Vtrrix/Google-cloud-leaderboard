@@ -36,7 +36,7 @@ export default function NavBar(props) {
     <>
       <CssBaseline />
       <ElevationScroll {...props}>
-        <AppBar style={props.theme.palette.type === "dark"? { background: "#121212" }: {background: "#fff"}}>
+        <AppBar style={props.theme.palette.type === "dark"? { background: "#121212" }: {background: "#f5f5f5"}}>
           <Toolbar>
             <Typography variant="h6" style={{color: "#344334", fontWeight: "bold", fontSize: "30px", display: "flex"}}>
               <p style={{margin: "0px", color: "#4285F4"}}>30</p>&nbsp;
