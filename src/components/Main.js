@@ -39,7 +39,7 @@ function Main() {
   return (
     <MuiThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <NavBar changeTheme={changeTheme}/>
+      <NavBar changeTheme={changeTheme} theme={theme}/>
       <LeaderBoard />
     </MuiThemeProvider>
   )
