@@ -17,11 +17,11 @@ function Main() {
 
   let darkTheme = createMuiTheme(theme);
   return (
-    <MuiThemeProvider theme={darkTheme}>
+    <>
       <CssBaseline />
-      <NavBar theme={theme} />
+      <NavBar />
       <LeaderBoard />
-    </MuiThemeProvider>
+    </>
   );
 }
 

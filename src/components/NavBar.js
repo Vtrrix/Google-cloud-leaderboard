@@ -33,18 +33,17 @@ export default function NavBar(props) {
     <>
       <CssBaseline />
       <ElevationScroll {...props}>
-        <AppBar style={{ background: "#2e003e" }}>
+        <AppBar>
           <Toolbar>
             <Typography
               variant="h6"
               style={{
-                color: "#e4dcf1",
                 fontWeight: "bold",
                 fontSize: "30px",
                 display: "flex",
               }}
             >
-              <p>30 Days of Google Cloud</p>
+              <p>LeaderBoard</p>
             </Typography>
           </Toolbar>
         </AppBar>

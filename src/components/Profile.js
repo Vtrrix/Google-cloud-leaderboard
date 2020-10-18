@@ -82,7 +82,7 @@ export default function Profile({ student, index }) {
             <Avatar
               aria-label={student.name}
               className={classes.avatar}
-              style={{ color: "white", background: "#8874a3" }}
+              // style={{ color: "black", background: "white" }}
             >
               <Typography>{student.quests_status}</Typography>
             </Avatar>
