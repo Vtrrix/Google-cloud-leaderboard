@@ -6,9 +6,7 @@ import {
   Typography,
   CssBaseline,
   useScrollTrigger,
-  IconButton
 } from "@material-ui/core";
-import Brightness4RoundedIcon from '@material-ui/icons/Brightness4Rounded';
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -31,22 +29,23 @@ ElevationScroll.propTypes = {
 };
 
 export default function NavBar(props) {
-
   return (
     <>
       <CssBaseline />
       <ElevationScroll {...props}>
-        <AppBar style={props.theme.palette.type === "dark"? { background: "#121212" }: {background: "#fafafa"}}>
+        <AppBar style={{ background: "#2e003e" }}>
           <Toolbar>
-            <Typography variant="h6" style={{color: "#344334", fontWeight: "bold", fontSize: "30px", display: "flex"}}>
-              <p style={{margin: "0px", color: "#4285F4"}}>30</p>&nbsp;
-              <p style={{margin: "0px", color: "#DB4437"}}>Days</p>&nbsp;
-              <p style={{margin: "0px", color: "#F4B400"}}>of</p>&nbsp;
-              <p style={{margin: "0px", color: "#0F9D58"}}>Google Cloud</p>
+            <Typography
+              variant="h6"
+              style={{
+                color: "#e4dcf1",
+                fontWeight: "bold",
+                fontSize: "30px",
+                display: "flex",
+              }}
+            >
+              <p>30 Days of Google Cloud</p>
             </Typography>
-            <IconButton style={{marginLeft: "auto"}} onClick={props.changeTheme}>
-              <Brightness4RoundedIcon/>
-            </IconButton>
           </Toolbar>
         </AppBar>
       </ElevationScroll>
