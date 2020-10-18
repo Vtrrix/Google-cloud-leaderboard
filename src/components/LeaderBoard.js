@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container } from "@material-ui/core";
-import { Skeleton } from "@material-ui/lab";
+import { Skeleton } from '@material-ui/lab';
 import Profile from "./Profile";
 
 class LeaderBoard extends Component {
@@ -34,14 +34,10 @@ class LeaderBoard extends Component {
 
   render() {
     return (
-      <Container style={{ marginTop: "70px" }}>
-        {this.state.values ? (
-          this.state.values.map((student, idx) => {
-            return <Profile student={student} key={student.id} index={idx} />;
-          })
-        ) : (
-          <Skeleton animation="wave" variant="rect" height="80" />
-        )}
+      <Container>
+        {this.state.values? this.state.values.map((student, idx) => {
+          return <Profile student={student} key={student.id} index={idx}/>;
+        }): <Skeleton animation="wave" variant="rect" height="80" /> }
       </Container>
     );
   }

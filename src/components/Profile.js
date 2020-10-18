@@ -1,4 +1,5 @@
 import React from "react";
+import { blue } from "@material-ui/core/colors";
 import clsx from "clsx";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import {
@@ -15,7 +16,8 @@ import {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginBottom: "25px",
+    marginTop: "24px",
+    marginBottom: "24px",
   },
   expand: {
     transform: "rotate(0deg)",
@@ -26,6 +28,9 @@ const useStyles = makeStyles((theme) => ({
   },
   expandOpen: {
     transform: "rotate(180deg)",
+  },
+  avatar: {
+    backgroundColor: blue[500],
   },
 }));
 
@@ -81,10 +86,17 @@ export default function Profile({ student, index }) {
           <Box display="flex">
             <Avatar
               aria-label={student.name}
+              style={{
+                color: "#fafafa",
+                background: "#efefef",
+                marginRight: "10px",
+                border: "1px solid #cdcdcd",
+              }}
               className={classes.avatar}
-              // style={{ color: "black", background: "white" }}
             >
-              <Typography>{student.quests_status}</Typography>
+              <Typography style={{ color: "black" }}>
+                {student.quests_status}
+              </Typography>
             </Avatar>
             <IconButton
               className={clsx(classes.expand, {
