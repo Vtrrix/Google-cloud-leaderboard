@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a5b1dee88734d9d71546c151711bfc7c",
+    "revision": "c2a369599416d2366eae5259da6d545b",
     "url": "/Google-cloud-leaderboard/index.html"
   },
   {
-    "revision": "2e5b97c87547c2fc380a",
+    "revision": "4e4ebb7d2afc65bfebb9",
     "url": "/Google-cloud-leaderboard/static/css/main.436a93f5.chunk.css"
   },
   {
-    "revision": "e14841f0e79abc45c4ad",
-    "url": "/Google-cloud-leaderboard/static/js/2.c6fc738b.chunk.js"
+    "revision": "c9c47992011e3336f963",
+    "url": "/Google-cloud-leaderboard/static/js/2.749b2bd9.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/Google-cloud-leaderboard/static/js/2.c6fc738b.chunk.js.LICENSE.txt"
+    "url": "/Google-cloud-leaderboard/static/js/2.749b2bd9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2e5b97c87547c2fc380a",
-    "url": "/Google-cloud-leaderboard/static/js/main.2dcaa031.chunk.js"
+    "revision": "4e4ebb7d2afc65bfebb9",
+    "url": "/Google-cloud-leaderboard/static/js/main.561381fe.chunk.js"
   },
   {
     "revision": "d8e2df37c0133d18ee3e",
